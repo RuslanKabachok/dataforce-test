@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import FileUpload from './Components/FileUpload';
 import ChartViewer from './Components/ChartViewer';
@@ -6,10 +6,23 @@ import ChartViewer from './Components/ChartViewer';
 function App() {
   const [data, setData] = useState([]);
   const [selectedExperiments, setSelectedExperiments] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const experimentIds = Array.from(
     new Set(data.map((row) => row.experiment_id))
   );
+
+useEffect(() => {
+  if (selectedExperiments.length > 0) {
+    setLoading(true);
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 2000); 
+
+    return () => clearTimeout(timeout);
+  }
+}, [selectedExperiments]);
+
 
   const handleCheckboxChange = (event) => {
     const { value, checked } = event.target;
@@ -57,7 +70,12 @@ function App() {
         </>
       )}
 
-      <ChartViewer data={data} selectedExperiments={selectedExperiments} />
+      {loading ? (
+  <p>⏳ Завантаження графіків...</p>
+) : (
+  <ChartViewer data={data} selectedExperiments={selectedExperiments} />
+)}
+
     </div>
   );
 }

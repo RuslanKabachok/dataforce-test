@@ -1,12 +1,32 @@
-# React + Vite
+# MLOps Experiment Viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Це фронтенд-застосунок для перегляду логів експериментів машинного навчання, який дозволяє:
 
-Currently, two official plugins are available:
+- Завантажити CSV-файл з експериментами.
+- Переглянути список доступних експериментів.
+- Обрати один або кілька для порівняння.
+- Візуалізувати метрики (`loss`, `accuracy`, тощо) у вигляді лінійних графіків.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Технології
 
-## Expanding the ESLint configuration
+- React + Vite
+- Papaparse (для парсингу CSV)
+- Recharts (для графіків)
+- CSS (ручна стилізація)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Як запустити локально
+
+1. Клонувати репозиторій:
+
+```bash
+git clone https://github.com/your-username/mlops-experiment-viewer.git
+cd mlops-experiment-viewer
+
+2. Встановити залежності: 
+
+npm install
+
+3. Запустити проєкт:
+
+npm run dev
+
