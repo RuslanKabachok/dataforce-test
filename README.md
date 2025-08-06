@@ -18,15 +18,17 @@
 
 1. Клонувати репозиторій:
 
-```bash
-git clone https://github.com/your-username/mlops-experiment-viewer.git
-cd mlops-experiment-viewer
+```git clone https://github.com/your-username/mlops-experiment-viewer.git```
+```cd mlops-experiment-viewer```
 
 2. Встановити залежності: 
 
-npm install
+```npm install```
 
 3. Запустити проєкт:
 
-npm run dev
+```npm run dev```
+
+4. Відкрити http://localhost:5173
+
 
