@@ -32,3 +32,4 @@
 4. Відкрити http://localhost:5173
 
 
+##🌐 Демо https://dataforce-test.vercel.app/
